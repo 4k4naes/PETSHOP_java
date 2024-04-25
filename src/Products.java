@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class Artykuly {
+public class Products{
     private static String kategoria;
 
     private String name;
@@ -12,7 +12,7 @@ public class Artykuly {
     private String description;
     private Integer quantity;
 
-    private static List<Artykuly> artykulyList = new ArrayList<>();
+    private static List<Products> artykulyList = new ArrayList<>();
 
     static {
         setKategoria("Jedzenie");
@@ -27,14 +27,14 @@ public class Artykuly {
                 String description = parts[2];
                 Integer quantity = Integer.parseInt(parts[3]);
 
-                artykulyList.add(new Artykuly(name, price, description, quantity));
+                artykulyList.add(new Products(name, price, description, quantity));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public Artykuly(String name, double price, String description, Integer quantity) {
+    public Products(String name, double price, String description, Integer quantity) {
         this.name = name;
         this.price = price;
         this.description = description;
@@ -46,7 +46,7 @@ public class Artykuly {
     }
 
     public static void setKategoria(String kategoria) {
-        Artykuly.kategoria = kategoria;
+    	Products.kategoria = kategoria;
     }
 
     public String getName() {
@@ -81,8 +81,7 @@ public class Artykuly {
         this.quantity = quantity;
     }
 
-    // Metoda zwracająca listę artykułów
-    public static List<Artykuly> getArtykulyList() {
+    public static List<Products> getArtykulyList() {
         return artykulyList;
     }
 }

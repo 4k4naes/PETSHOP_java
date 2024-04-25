@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Display {
 	
-	List<Artykuly> listaArtykulow = Artykuly.getArtykulyList();
+	List<Products> listaArtykulow = Products.getArtykulyList();
 	
 	Scanner writer = new Scanner(System.in);
 	Cart cart = new Cart();
@@ -46,7 +46,7 @@ public class Display {
 		 int position = 1;
 		 System.out.println("     0 - Filtry cenowe");
 		 
-	     for (Artykuly artykul : listaArtykulow) {
+	     for (Products artykul : listaArtykulow) {
             System.out.println("     " + position + " - " + artykul.getPrice() + " Zl"  + "   "+ artykul.getName());
             position++;
         }
@@ -106,7 +106,7 @@ public class Display {
 		 System.out.println("Kwota minimalna - " + min);
 		 System.out.println("Kwota maksymalna - " + max + "\n");
 		 int positions = 0;
-		 for (Artykuly artykul : listaArtykulow) {
+		 for (Products artykul : listaArtykulow) {
 		        if (artykul.getPrice() >= min && artykul.getPrice() <= max) {
 		        	positions++;
 		        }
@@ -125,7 +125,7 @@ public class Display {
 			
 			 System.out.println("     0 - Zmien filtr");
 			 
-		    for (Artykuly artykul : listaArtykulow) {
+		    for (Products artykul : listaArtykulow) {
 		    	double cena = artykul.getPrice();
 		        if (cena >= min && cena <= max) {
 		            System.out.println("     " + position + " - " + cena + " Zl" + "   " + artykul.getName());
@@ -200,7 +200,7 @@ public class Display {
 			switch(whatNext) {
             case "koszyk":
             	Extras.clearConsole();
-            	Artykuly newInCart = listaArtykulow.get(option-1);
+            	Products newInCart = listaArtykulow.get(option-1);
             	String newName = newInCart.getName();
             	Double newPrice = newInCart.getPrice();
             	cart.addToCart(newName, newPrice);
