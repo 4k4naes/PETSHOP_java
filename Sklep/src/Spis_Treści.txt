@@ -1,0 +1,22 @@
+Spis Treści
+
+1. Wstęp
+
+	Aplikacja sklepu zoologicznego Pet Shop jest przedstawieniem asortymentu sklepu online i możliwością robienia zakupów bez wychodzenia z domu. Dzięki temu firma może dotrzeć do większej ilości potencjalnych klientów poszerzając swoje zarówno zyski jak i rozgłos. 
+
+
+KLASY:
+
+2. Display - Główna klasa, odpowiadająca za wyświetlanie produktów i wygodną możliwość przeglądania ich. Pytania są zaprojektowane anty idiotom więc jest możliwość wybrania tylko istniejących opcji, przez co użytkownik nie ma jak sie zgubić. Aktualnie aplikacji brak wyglądu wizualnego.
+2.1. displayProducts(), displayWithFilters() - Funkcję z podobnym zadaniem, polegające na wyświetlaniu produktów typu artykul z możliwością odniesienia się dla użytkownika do konkretnego jednego produktu i dalszych poczynań z nim.
+2.2. descriptionDisplay(int option) - Funkcja wykonywana po wybraniu przez użytkownika jednego konkretnego produktu (w postaci numerycznej, stąd int option) i umożliwiająca dostosować wybór do naszych potrzeb (czy chcemy produkt w koszyku czy też nie).
+
+3. Cart - Klasa odpowiadająca za koszyk, zbiera w nim dodane przez użytkownika produkty typu artykul i wyświetla je umożliwiając przejrzeć je nam przed podjęciem decyzji o zakupie.
+3.1. displayCart() - Główna funkcja w klasie, odpowiadająca za wyświetlenie zawartości koszyka wraz z sumą łączną w koszyku, po uzupełnieniu koszyka i chęci zakupu dochodzimy do funkcji buy() która wyświetla nam podsumowanie i przeprowadza przez płatności (nie przeprowadza przez nic wsumie, ale by to robila gdyby tak było).
+3.2. delateFromCart() oraz myOrders() są dodatkowymi funkcjami odpowiednimi za możliwość modyfikacji na tle zawartości naszego koszyka lub wyświetlenia istenijących już transakcji.
+
+4. Artykuly - Równie ważna klasa co Display, jednak odpowiadająca za część nie tyle co displayu co działania. Definuje ona typ Artykuly na którym bazuje wyświetlanie lub najzwyczajniej w świecie istnienie produktów w programie. W przyszłości zostanie napisana część dla pracownika, gdzie właśnie tu będzie można dodać produkty, a nie ręcznie bespośrednio do kodu. Pozatym klasa dodatkowo ma metodę zwracającą artykuly w postaci listy dla łatwiejszego operowania na nich.
+
+5. Extras - Klasa aktualnie dość mało rozbudowana, jednak w zamyśle ma ona zawierać dodatkowe metody odpowiedzialne za mniej istotne procesy tak jak teraz tu się znajduje clearConsole() odpowiedzialne za czyszczenie konsoli, w celu łatwiejszego widoku na program podczas wykonywania go, jednak w całym procesie nijak wspływa na przebieg transakcji.
+
+. Sposób działania - Użytkownik wpisuje ręcznie, zgpdnie z instrukcjami dane z klawiatury, dokładnie jest opisane czy wpisany ma byc wyraz, najczęściej znajdujący się pomiędzy parą kwadratowych nawiasów ([] <- kwadratowy nawias) czy wartość ma być wprowadzona w sposób numeryczny. 
