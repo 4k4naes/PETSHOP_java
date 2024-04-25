@@ -2,11 +2,6 @@ import java.util.List;
 import java.util.Scanner;
 
 
-//TODO
-// - niech sie w while przy wyborze koszyk/dalej nie wyswietla ze zle jak nic jeszcze nie klikles
-// - displayCart(); w Cart.java 
-
-
 public class Display {
 	
 	List<Products> listaArtykulow = Products.getArtykulyList();
