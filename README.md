@@ -11,7 +11,7 @@ To use the Pet Shop Application, follow these steps:
 1. Clone the repository to your local machine.
 
 ```
-git clone https://github.com/4k4naes/pet-shop 
+git clone https://github.com/4k4naes/PETSHOP_java
 ```
 
 2. Ensure you have Java installed.
