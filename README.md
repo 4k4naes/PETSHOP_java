@@ -9,6 +9,11 @@ The Pet Shop Application is a Java-based command-line application that simulates
 To use the Pet Shop Application, follow these steps:
 
 1. Clone the repository to your local machine.
+
+```
+git clone https://github.com/4k4naes/pet-shop 
+```
+
 2. Ensure you have Java installed.
 3. Open the project in your preferred Java IDE.
 4. Compile and run the `Main` class to start the application.
